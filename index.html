@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>activity3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body><center>
+    <label>Name: </label><input type="text" id="txtId"><br><br>
+    <label>address: </label><input type="text" class="txtClass"><br><br>
+    <label>Age: </label><input type="text" class="txtClass"><br><br>
+
+    <input type="button" class="btnClass" value="1">
+    <input type="button" class="btnClass" value="2">
+    <input type="button" class="btnClass" value="3">
+    <input type="button" class="btnClass" value="4">
+
+
+    <p id = "label"></p>
+
+    <script src="olivo.js"></script>
+    <script>
+
+        // listen to button click of target class
+        $activity3.el(".btnClass").on("click", function () {
+            $activity3.el("#label").set("Text: " + this.value);
+        });
+        // listen both id, class
+        $activity3.el("#txtId, .txtClass").on("keyup", function () {
+            $activity3.el("#label").set("Text: " + this.value);
+        });
+
+    </script>
+</body>
+</html>
+</center>
